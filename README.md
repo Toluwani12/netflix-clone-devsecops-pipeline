@@ -7,12 +7,7 @@
   </a>
 </div>
 
-<br />
-
-<div align="center">
-  <img src="./public/assets/home-page.png" alt="Logo" width="100%" height="100%">
-  <p align="center">Home Page</p>
-</div>
+![alt text](Img/netflix%20full.png)
 
 # Netflix Clone DevSecOps Automation
 
@@ -162,6 +157,7 @@ sudo chmod 777 /var/run/docker.sock
 The pipeline is designed to be resilient and secure:
 1.  **Clean**: Always starts with a clean workspace.
 2.  **Scan**: Runs SonarQube and waits for Quality Gate (aborts if failed).
+![alt text](Img/quality%20gate%20passed.png)
 3.  **Check**: Scans dependencies (OWASP) and filesystem (Trivy).
 4.  **Build**: Creates Docker image using the TMDB API Key.
 5.  **Deploy**:
@@ -172,6 +168,9 @@ The pipeline is designed to be resilient and secure:
 
 ### Prometheus & Grafana Setup
 1.  **Prometheus**: Configured to scrape Jenkins and Node Exporter metrics.
+![alt text](Img/target.png)
 2.  **Grafana**: Visualizes the data.
     *   **Dashboard**: Import ID `1860` (Node Exporter Full) for complete system visibility.
+    ![alt text](Img/prometheus.png) 
+    ![alt text](Img/prometheus_2.png) 
 
